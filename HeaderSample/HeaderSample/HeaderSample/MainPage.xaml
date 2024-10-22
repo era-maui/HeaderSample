@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:headerSample="clr-namespace:HeaderSample"
+             x:Class="HeaderSample.MainPage">
+
+    <ScrollView>
+
+	    <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+				<ListView x:Name="MyList" BackgroundColor="Red">
+					<ListView.Header>
+						<Grid BackgroundColor="LightGray">
+							<Label Margin="10,0,0,0"
+							       Text="Monkeys"
+							       FontSize="12"
+							       FontAttributes="Bold" Behaviors="{headerSample:MyBehavior}"/>
+						</Grid>
+					</ListView.Header>
+					<ListView.Footer>
+					<StackLayout BackgroundColor="LightGray" >
+							<Label Margin="10,0,0,0"
+							       Text="Friends of Monkey"
+							       FontSize="12"
+							       FontAttributes="Bold" Behaviors="{headerSample:MyPlatformBehavior}"  />
+						</StackLayout>
+					</ListView.Footer>
+				</ListView>
+
+			</VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
